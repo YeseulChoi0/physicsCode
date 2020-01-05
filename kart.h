@@ -10,6 +10,7 @@ struct kart{
 
 struct kart initialize();
 struct kart setPosition(struct kart cart, double x, double y);
+struct kart setAcceleration(struct kart cart, double x, double y);
 struct kart move(struct kart currentKart, int xdir, int ydir, double timePassed);
 struct kart updatePosition(struct kart currentKart, double timePassed);
 struct kart updateVelocity(struct kart currentKart, double timePassed);

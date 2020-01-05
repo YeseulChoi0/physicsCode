@@ -25,6 +25,11 @@ struct kart setPosition(struct kart cart, double x, double y){
   return cart;
 }
 
+struct kart setAcceleration(struct kart cart, double x, double y){
+  cart.acceleration.x = x;
+  cart.acceleration.y = y;
+  return cart;
+}
 struct kart move(struct kart currentKart, int xdir, int ydir, double timePassed){
   currentKart = updateAcceleration(currentKart, timePassed);
   currentKart = updatePosition(currentKart, timePassed);
