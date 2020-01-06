@@ -15,3 +15,4 @@ struct kart set_x_velocity(struct kart cart, double x); //should be rad 2/2 or -
 struct kart move(struct kart currentKart, int xdir, int ydir, double timePassed);
 struct kart update_position(struct kart currentKart, double timePassed);
 struct kart update_velocity(struct kart currentKart, double timePassed);
+struct kart handle_cases(struct kart cart, int xdir, int ydir, double timePassed);

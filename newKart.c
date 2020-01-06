@@ -7,7 +7,6 @@
 //const double CONSTANT_ACCEL;
 //const double MAX_ACCEL ;
 
-
 struct kart initialize(){
   struct kart A;
   A.position.x = 0;
@@ -21,6 +20,24 @@ struct kart initialize(){
 struct kart set_position(struct kart cart, double x, double y){
   cart.position.x = x;
   cart.position.y = y;
+  return cart;
+}
+
+struct kart handle_cases(struct kart cart, int xdir, int ydir, double timePassed){
+  //single key presses
+  if (xdir == 0 && ydir == 0){
+    cart = move(cart, 0, -.5, timePassed);
+    return cart;
+  }if (ydir == 0){
+    cart = move(cart, xdir * 1, -.5, timePassed);
+    return cart;
+  }if (xdir == 0){
+    cart = move(cart, 0, ydir * 1, timePassed);
+    return cart;
+  }
+
+  //two key presses NOTHING MORE >:(
+  cart = move(cart, xdir * sqrt(2) / 2, ydir * sqrt(2) / 2, timePassed);
   return cart;
 }
 
