@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include "kart.h"
+#include "newKart.h"
 
-const double CONSTANT_ACCEL = 10;
-const double MAX_ACCEL = 100;
+//const double CONSTANT_ACCEL;
+//const double MAX_ACCEL ;
 
 
 struct kart initialize(){
@@ -24,7 +24,7 @@ struct kart set_position(struct kart cart, double x, double y){
   return cart;
 }
 
-struct kart set_y_acceleration(struct kart cart, double y);{
+struct kart set_y_acceleration(struct kart cart, double y){
   cart.acceleration = y;
   return cart;
 }
